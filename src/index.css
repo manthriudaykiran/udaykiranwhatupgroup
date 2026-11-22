@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", "Noto Sans Telugu", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", "Noto Sans Telugu", system-ui, -apple-system, sans-serif;
+  --font-telugu: "Noto Sans Telugu", "DM Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #faf8f5;
+    color: #141923;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
+
+.font-telugu {
+  font-family: var(--font-telugu);
+}
+
+.whatsapp-wallpaper {
+  background-color: #efeae2;
+  background-image:
+    radial-gradient(rgba(17, 75, 54, 0.055) 1px, transparent 1px),
+    radial-gradient(rgba(53, 89, 224, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0, 11px 11px;
+}
+
+.soft-accent-surface {
+  background: linear-gradient(135deg, rgba(226, 234, 255, 0.72) 0%, rgba(238, 233, 255, 0.72) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
